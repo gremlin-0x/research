@@ -1,4 +1,4 @@
-# Wi‑Fi Gym — Chain 10: Traditional WPA/WPA2 Password Attack
+# Chain #10: Traditional WPA/WPA2 Password Attack
 
 ## Goal & Scope
 

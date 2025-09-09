@@ -1,4 +1,4 @@
-# Wi‑Fi Gym — Chain 12: CPU vs GPU Cracking & Performance Tuning
+# Chain #12: CPU vs GPU Cracking & Performance Tuning
 
 ## Goal & Scope
 

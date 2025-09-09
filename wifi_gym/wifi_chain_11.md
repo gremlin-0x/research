@@ -1,4 +1,4 @@
-# Wi‑Fi Gym — Chain 11: Advanced Password Cracking Techniques (Rules, Masks, Combinator & Hybrid)
+# Chain #11: Advanced Password Cracking Techniques (Rules, Masks, Combinator & Hybrid)
 
 ## Goal & Scope
 

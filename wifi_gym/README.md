@@ -12,4 +12,6 @@ Practical Wi-Fi attack chains with step-by-step instructions and Anki flashcards
 - [Chain 7: Connecting to Wi-Fi Networks](wifi_chain_07.md)
 - [Chain 8: Finding Hidden SSIDs](wifi_chain_08.md)
 - [Chain 9: Bypassing MAC Filtering](wifi_chain_09.md)
-
+- [Chain 10: Traditional WPA/WPA2 Password Attack](wifi_chain_10.md)
+- [Chain 11: Advanced Password Cracking (Rules, Masks, Combinator & Hybrid)](wifi_chain_11.md)
+- [Chain 12: CPU vs GPU Cracking & Performance Tuning](wifi_chain_12.md)
