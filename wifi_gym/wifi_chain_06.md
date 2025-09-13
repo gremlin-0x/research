@@ -9,7 +9,7 @@ This chain covers how to use **Aircrack-ng** to crack WEP and WPA/WPA2 keys once
 Before cracking, test CPU performance to estimate cracking speed.
 
 ```bash
-aircrack-ng -S
+sudo aircrack-ng -S
 ```
 - `-S` → Benchmark mode, tests key-cracking speed.
 - Output: keys/second rate (k/s). Higher is better.
@@ -25,7 +25,7 @@ aircrack-ng -S
 WEP cracking depends on Initialization Vectors (IVs). You need thousands to succeed.
 
 ```bash
-airodump-ng --ivs -w capture wlan0mon
+sudo airodump-ng --ivs -w capture wlan0mon
 ```
 - `--ivs` → Save only IVs (smaller file size, faster analysis).
 - `-w capture` → Output file prefix.
@@ -33,7 +33,7 @@ airodump-ng --ivs -w capture wlan0mon
 ### 2.2 Run Aircrack-ng with Korek Method
 
 ```bash
-aircrack-ng -K capture.ivs
+sudo aircrack-ng -K capture.ivs
 ```
 - `-K` → Use Korek WEP attack (collection of statistical cracking methods).
 - `capture.ivs` → File containing IVs.
@@ -53,7 +53,7 @@ Use Airodump-ng to capture the WPA 4-way handshake.
 - Deauthentication attacks with Aireplay-ng help force clients to reconnect, generating the handshake.
 
 ```bash
-airodump-ng -c <channel> --bssid <AP_MAC> -w capture wlan0mon
+sudo airodump-ng -c <channel> --bssid <AP_MAC> -w capture wlan0mon
 ```
 - `-c <channel>` → Stay on target channel.
 - `--bssid <AP_MAC>` → Lock on specific AP.
@@ -71,7 +71,7 @@ hcxpcapngtool -o hackme.22000 hackme-01.cap
 ### 3.2 Run Aircrack-ng with Wordlist
 
 ```bash
-aircrack-ng capture.cap -w /path/to/wordlist.txt
+sudo aircrack-ng capture.cap -w /path/to/wordlist.txt
 ```
 - `capture.cap` → File with captured handshake.
 - `-w /path/to/wordlist.txt` → Dictionary file with possible passwords.
@@ -84,7 +84,7 @@ aircrack-ng capture.cap -w /path/to/wordlist.txt
 
 ```
 # Legacy export for Hashcat mode 2500 (.hccapx)
-aircrack-ng capture.cap -J hackme
+sudo aircrack-ng capture.cap -J hackme
 # -> hackme.hccapx (use: hashcat -m 2500 hackme.hccapx /path/to/wordlist.txt)
 ```
 - Useful when following older guides that still expect `.hccapx`.
@@ -93,7 +93,7 @@ aircrack-ng capture.cap -J hackme
 Some WPA networks allow PMKID extraction without clients.
 
 ```bash
-aircrack-ng capture.cap -w /path/to/wordlist.txt
+sudo aircrack-ng capture.cap -w /path/to/wordlist.txt
 ```
 - Works the same way if capture contains PMKID.
 
@@ -121,13 +121,13 @@ You can then test it by connecting to the network (see Chain #7).
 n1A2b3C4d5	Basic	Ops::WiFi Gym::Chain 06: Cracking Keys	What is an Initialization Vector (IV) in WEP cracking?	A per-packet random value used with the WEP key. Collecting many IVs allows statistical attacks to recover the WEP key.	wifi
 f6G7h8I9j0	Basic	Ops::WiFi Gym::Chain 06: Cracking Keys	What is a WPA 4-way handshake?	An authentication exchange between client and AP that confirms both know the pre-shared key and generates encryption keys.	wifi
 k1L2m3N4o5	Basic	Ops::WiFi Gym::Chain 06: Cracking Keys	What is a PMKID in WPA/WPA2 networks?	A Pairwise Master Key Identifier that can be captured directly from the AP without a client, enabling offline cracking.	wifi
-p6Q7r8S9t0	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	What does the <code>-K</code> option do in Aircrack-ng?	Invokes the Korek statistical attacks for WEP key recovery.	wifi
+p6Q7r8S9t0	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	Which Aircrack-ng option invokes the Korek statistical attacks for WEP key recovery when cracking capture.ivs?	<code>-K</code>	wifi
 u1V2w3X4y5	Basic	Ops::WiFi Gym::Chain 06: Cracking Keys	Why is WPA cracking wordlist-based instead of statistical like WEP?	WPA uses strong per-session key derivation (PBKDF2 with SHA1) that cannot be cracked statistically; only dictionary attacks are feasible.	wifi
-z6A7b8C9d0	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	What Aircrack-ng command benchmarks cracking speed?	<code>aircrack-ng -S</code>	wifi
-e1F2g3H4i5	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	What Airodump-ng command captures only WEP IVs?	<code>airodump-ng --ivs -w capture wlan0mon</code>	wifi
-j6K7l8M9n0	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	What Aircrack-ng command cracks WEP IVs with Korek attacks?	<code>aircrack-ng -K capture.ivs</code>	wifi
-o1P2q3R4s5	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	What Airodump-ng command captures a WPA handshake for a specific AP?	<code>airodump-ng -c &lt;channel&gt; --bssid &lt;AP_MAC&gt; -w capture wlan0mon</code>	wifi
-t6U7v8W9x0	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	What Aircrack-ng command cracks a WPA handshake with a wordlist?	<code>aircrack-ng capture.cap -w /path/to/wordlist.txt</code>	wifi
-hN2cR7yWpK	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	Which command extracts WPA/PMKID material into Hashcat's 22000 format from <code>hackme-01.cap</code>?	<code>hcxpcapngtool -o hackme.22000 hackme-01.cap</code>	wifi
-zT5uL1aGxD	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	Which Aircrack-ng option exports an <code>.hccapx</code> file for Hashcat legacy mode 2500?	<code>-J</code> (e.g., <code>aircrack-ng capture.cap -J hackme</code>)	wifi
+z6A7b8C9d0	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	Which Aircrack-ng command benchmarks cracking speed on your system?	<code>sudo aircrack-ng -S</code>	wifi
+e1F2g3H4i5	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	Which Airodump-ng command captures only WEP IVs into a file named capture.ivs using interface wlan0mon?	<code>sudo airodump-ng --ivs -w capture wlan0mon</code>	wifi
+j6K7l8M9n0	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	Which Aircrack-ng command cracks WEP IVs in capture.ivs using Korek attacks?	<code>sudo aircrack-ng -K capture.ivs</code>	wifi
+o1P2q3R4s5	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	Which Airodump-ng command captures a WPA handshake on channel 6 for AP AA:BB:CC:DD:EE:FF, saving to capture.cap using interface wlan0mon?	<code>sudo airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w capture wlan0mon</code>	wifi
+t6U7v8W9x0	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	Which Aircrack-ng command cracks the WPA handshake stored in capture.cap using the wordlist rockyou.txt?	<code>sudo aircrack-ng capture.cap -w rockyou.txt</code>	wifi
+hN2cR7yWpK	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	Which command extracts WPA/PMKID material into Hashcat’s 22000 format from hackme-01.cap, outputting hackme.22000?	<code>hcxpcapngtool -o hackme.22000 hackme-01.cap</code>	wifi
+zT5uL1aGxD	Basic (type in the answer)	Ops::WiFi Gym::Chain 06: Cracking Keys	Which Aircrack-ng command exports an .hccapx file named hackme.hccapx from capture.cap for Hashcat legacy mode 2500?	<code>sudo aircrack-ng capture.cap -J hackme</code>	wifi
 ```
