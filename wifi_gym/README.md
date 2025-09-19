@@ -15,3 +15,7 @@ Practical Wi-Fi attack chains with step-by-step instructions and Anki flashcards
 - [Chain 10: Traditional WPA/WPA2 Password Attack](wifi_chain_10.md)
 - [Chain 11: Advanced Password Cracking (Rules, Masks, Combinator & Hybrid)](wifi_chain_11.md)
 - [Chain 12: CPU vs GPU Cracking & Performance Tuning](wifi_chain_12.md)
+- [Chain 13: Default Credentials & Vendor-Based Cracking](wifi_chain_13.md)
+- [Chain 14: Generating Custom Wordlists](wifi_chain_14.md)
+- [Chain 15: Username Generation for WPA‑Enterprise](wifi_chain_15.md)
+- [Chain 16: Precomputation (Rainbow Table) Attack](wifi_chain_16.md)
