@@ -19,3 +19,5 @@ Practical Wi-Fi attack chains with step-by-step instructions and Anki flashcards
 - [Chain 14: Generating Custom Wordlists](wifi_chain_14.md)
 - [Chain 15: Username Generation for WPA‑Enterprise](wifi_chain_15.md)
 - [Chain 16: Precomputation (Rainbow Table) Attack](wifi_chain_16.md)
+- [Chain 17: Cisco Password Cracking](wifi_chain_17.md)
+- [Chain 18: WEP & RC4](wifi_chain_18.md)
