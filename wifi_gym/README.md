@@ -21,3 +21,4 @@ Practical Wi-Fi attack chains with step-by-step instructions and Anki flashcards
 - [Chain 16: Precomputation (Rainbow Table) Attack](wifi_chain_16.md)
 - [Chain 17: Cisco Password Cracking](wifi_chain_17.md)
 - [Chain 18: WEP & RC4](wifi_chain_18.md)
+- [Chain 19: ARP Request Replay Attack](wifi_chain_19.md) 
