@@ -160,36 +160,3 @@ If successful:
 6. Explore vendor default generators.
 7. Generate WPS PINs with wpspin.
 8. Test with OneShot/Reaver to retrieve PSK.
-
----
-
-## Anki Deck:
-
-```
-#separator:tab
-#html:true
-#guid column:1
-#notetype column:2
-#deck column:3
-#tags column:6
-
-F1a2B3c4D5	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	Why perform vendor lookup from SSID/BSSID before cracking?	Vendors often use predictable default password or WPS patterns, so identifying the vendor narrows cracking strategy.	wifi
-G2b3C4d5E6	Basic (type in the answer)	Ops::WiFi Gym::Chain 13: Default Credentials	Which command finds the vendor for BSSID <code>AA:BB:CC:DD:EE:FF</code> using the local OUI file <code>/var/lib/ieee-data/oui.txt</code>?	"<code>grep -i ""AA-BB-CC"" /var/lib/ieee-data/oui.txt</code>"	wifi
-H3c4D5e6F7	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	What Netgear default password pattern is known?	<code>{adjective}{noun}{3 digits}</code>	wifi
-I4d5E6f7G8	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	Give two examples of Netgear default passwords.	<code>sleeksalamander113</code>, <code>abandonedelephant556</code>	wifi
-J5e6F7g8H9	Basic (type in the answer)	Ops::WiFi Gym::Chain 13: Default Credentials	Type the GitHub repository slug (owner/repo) that provides a Netgear Hashcat wordlist.	<code>LivingInSyn/netgear_hashcat_wordlist</code>	wifi
-L7g8H9i0J1	Basic (type in the answer)	Ops::WiFi Gym::Chain 13: Default Credentials	What tool expands adjective+noun pools into Netgear candidates?	<code>NPCinator</code>	wifi
-M8h9I0j1K2	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	Why limit NPCinator runtime in labs?	It generates very large lists that can consume disk and CPU if left running too long.	wifi
-N9i0J1k2L3	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	Name four community default password generator repos.	Smart Password Generator, IMEI Generator, Time Warner/Spectrum Cracker, Wifi-WPA-Keyspace-List.	wifi
-O1j2K3l4M5	Basic (type in the answer)	Ops::WiFi Gym::Chain 13: Default Credentials	What tool generates default WPS PINs from BSSID?	<code>wpspin</code>	wifi
-P2k3L4m5N6	Basic (type in the answer)	Ops::WiFi Gym::Chain 13: Default Credentials	Which <code>wpspin</code> flag enumerates multiple PIN candidates?	<code>-A</code>	wifi
-R4m5N6o7P8	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	Which tool can verify a WPS PIN and extract the WPA PSK?	OneShot (or Reaver).	wifi
-S5n6O7p8Q9	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	What information does OneShot output upon success?	The WPS PIN, WPA PSK, and SSID of the target AP.	wifi
-T6o7P8q9R0	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	Why are default credentials a realistic attack vector in Wi-Fi?	Many users never change factory passwords or disable WPS, leaving predictable defaults exploitable.	wifi
-V8q9R0s1T2	Basic (type in the answer)	Ops::WiFi Gym::Chain 13: Default Credentials	What file is commonly used for vendor lookups on Linux systems?	<code>/var/lib/ieee-data/oui.txt</code>	wifi
-X0s1T2u3V4	Basic (type in the answer)	Ops::WiFi Gym::Chain 13: Default Credentials	Which OneShot command tests PIN <code>99956042</code> against BSSID <code>AA:BB:CC:DD:EE:FF</code> on interface <code>wlan0mon</code>?	<code>python3 oneshot.py -i wlan0mon -b AA:BB:CC:DD:EE:FF -p 99956042</code>	wifi
-Y1t2U3v4W5	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	What does NPCinator output by default and how is it used?	Generates Netgear-style candidate passwords and saves them for cracking attempts.	wifi
-Z2u3V4w5X6	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	Why is SSID naming pattern recognition useful?	Factory SSIDs often reveal vendor, guiding which default patterns to try.	wifi
-A3v4W5x6Y7	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	What two tools are typically used after generating default password candidates?	Hashcat for cracking and OneShot/Reaver for WPS PIN testing.	wifi
-C5x6Y7z8A9	Basic	Ops::WiFi Gym::Chain 13: Default Credentials	Explain why default Netgear password structure is both strong and weak.	It uses long words (strong entropy) but predictable pattern (weakness exploitable by attackers).	wifi
-```

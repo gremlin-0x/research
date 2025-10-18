@@ -139,30 +139,3 @@ hashcat -m 22000 hash wordlist.txt -D 2 -w 3
 3. Optionally target device ID with `-d`.
 4. Increase performance with `-O`.
 5. Adjust load with `-w 1–4`.
-
----
-
-## Anki Deck:
-
-```
-#separator:tab
-#html:true
-#guid column:1
-#notetype column:2
-#deck column:3
-#tags column:6
-
-P7d2K9m4X1	Basic	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	What does hash rate represent in WPA cracking?	The number of password guesses (hash computations) per second.	wifi
-R4g7N2b8L5	Basic	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	Why are GPUs generally faster than CPUs for password cracking?	Because GPUs have thousands of cores optimized for parallel computation, while CPUs have fewer cores optimized for sequential tasks.	wifi
-S9k1H3q6M2	Basic (type in the answer)	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	What Hashcat flag restricts cracking to CPU only?	<code>-D 1</code>	wifi
-T6j3L8n1C7	Basic (type in the answer)	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	What Hashcat flag restricts cracking to GPU only?	<code>-D 2</code>	wifi
-U2m5P9r4B8	Basic	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	When running <code>hashcat -m 22000 hash /usr/share/wordlists/rockyou.txt -O</code>, what does <code>-O</code> do?	Enables optimized kernels for faster cracking but may restrict maximum password length.	wifi
-V1c4K7d9Q3	Basic	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	When running <code>hashcat -m 22000 hash /usr/share/wordlists/rockyou.txt -D 1 --cpu-affinity=1,2,3,4</code>, what does <code>--cpu-affinity</code> do?	It binds cracking threads to specific CPU cores to control workload distribution.	wifi
-W3e6N8p2Z4	Basic (type in the answer)	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	What Hashcat command cracks a WPA hash file <code>hash</code> with CPU only, using cores 1–4 and the wordlist <code>/usr/share/wordlists/rockyou.txt</code>?	<code>hashcat -m 22000 hash /usr/share/wordlists/rockyou.txt -D 1 --cpu-affinity=1,2,3,4</code>	wifi
-X5h9Q2s7J1	Basic	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	How do you list all available cracking devices in Hashcat?	<code>hashcat -I</code>	wifi
-Y8a3K6t5L9	Basic (type in the answer)	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	What command selects device ID <code>2</code> on GPU only to crack WPA hash file <code>hash</code> with the wordlist <code>/usr/share/wordlists/rockyou.txt</code>?	<code>hashcat -m 22000 hash /usr/share/wordlists/rockyou.txt -D 2 -d 2</code>	wifi
-Z7f2M4b6V8	Basic	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	What are the four workload levels in Hashcat and what does <code>-w 4</code> mean?	<code>-w 1</code> low, <code>-w 2</code> default, <code>-w 3</code> high, <code>-w 4</code> nightmare; <code>-w 4</code> = max performance with heavy system load.	wifi
-A9k5L1r3C2	Basic (type in the answer)	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	Show a command that uses both CPU and GPU together to crack WPA hash file <code>hash</code> with the wordlist <code>/usr/share/wordlists/rockyou.txt</code>.	<code>hashcat -m 22000 hash /usr/share/wordlists/rockyou.txt -D 1,2</code>	wifi
-B6p8N9d2F4	Basic	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	What practical risks come with running Hashcat at <code>-w 4</code> (Nightmare)?	High power consumption, overheating, and potential system instability.	wifi
-C4m7H2q9J5	Basic	Ops::WiFi Gym::Chain 12: CPU vs GPU Cracking	Why might a CPU still be useful for cracking despite being slower?	It can handle certain hash algorithms better, is available when GPU isn’t, or can supplement GPU cracking.	wifi
-```

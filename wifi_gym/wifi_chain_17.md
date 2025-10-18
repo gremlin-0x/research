@@ -191,39 +191,3 @@ hashcat -m 9300 -a 0 --force hash /usr/share/wordlists/rockyou.txt
 3. Apply John/Hashcat for Types 4/5/8/9.
 4. Use decryptor for Type 7 if testing.
 5. Recommend migration to Types 8/9.
-
----
-
-## Anki Deck
-
-```
-#separator:tab
-#html:true
-#guid column:1
-#notetype column:2
-#deck column:3
-#tags column:6
-
-A17aa11BB	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	What are Cisco <code>Type 0</code> passwords?	Plaintext passwords stored in configs, immediately readable. Critical risk.	wifi
-B17bb22CC	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Show a config example of a Cisco <code>Type 0</code> password.	<code>username tom password 0 P@ssw0rd</code>	wifi
-C17cc33DD	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which Cisco password type was historically flawed by using unsalted single SHA-256 iteration?	<code>Type 4</code>	wifi
-D17dd44EE	Basic (type in the answer)	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which Hashcat mode flag corresponds to Cisco <code>Type 4</code> (unsalted SHA-256)?	<code>-m 5700</code>	wifi
-E17ee55FF	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Provide an example Hashcat command for cracking Cisco <code>Type 4</code> (mode <code>-m 5700</code>) using <code>rockyou.txt</code>.	<code>hashcat -m 5700 -O -a 0 hash /usr/share/wordlists/rockyou.txt</code>	wifi
-F17ff66GG	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which Cisco password type uses MD5-crypt with ~1000 iterations and a salt?	<code>Type 5</code>	wifi
-G17gg77HH	Basic (type in the answer)	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which Hashcat mode flag corresponds to Cisco <code>Type 5</code> (MD5-crypt)?	<code>-m 500</code>	wifi
-H17hh88II	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Give a config example of a Cisco <code>Type 5</code> password.	<code>username bob secret 5 $1$w1Jm$bCt7eJNv.CjWPwyfWcobP0</code>	wifi
-I17ii99JJ	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which Cisco password type uses reversible AES encryption?	<code>Type 6</code>	wifi
-J17jj00KK	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Why is <code>Type 6</code> safer than <code>Type 7</code> but still a risk?	It uses AES instead of simple obfuscation, but the encryption is reversible if the AES key or method is known.	wifi
-K17kk11LL	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	What weak cipher underlies Cisco <code>Type 7</code> passwords?	A Vigenère-like obfuscation (simple reversible cipher with known key), easily reversible.	wifi
-L17ll22MM	Basic (type in the answer)	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which script/tool is commonly used to decrypt Cisco <code>Type 7</code> passwords offline?	<code>ciscot7.py</code>	wifi
-M17mm33NN	Basic (type in the answer)	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which Hashcat mode flag corresponds to Cisco <code>Type 8</code> (PBKDF2-SHA256)?	<code>-m 9200</code>	wifi
-N17nn44OO	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which John the Ripper format name corresponds to cracking Cisco <code>Type 8</code>?	<code>pbkdf2-hmac-sha256</code>	wifi
-O17oo55PP	Basic (type in the answer)	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which Hashcat mode flag corresponds to Cisco <code>Type 9</code> (scrypt)?	<code>-m 9300</code>	wifi
-P17pp66QQ	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which John the Ripper format corresponds to Cisco <code>Type 9</code>?	<code>scrypt</code>	wifi
-Q17qq77RR	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which Cisco password types should always be treated as insecure and avoided?	Types <code>0</code>, <code>4</code>, <code>5</code>, and <code>7</code>.	wifi
-R17rr88SS	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which Cisco password types are recommended (NSA / modern guidance)?	Types <code>8</code> and <code>9</code>.	wifi
-S17ss99TT	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Why is <code>Type 4</code> considered weaker than <code>Type 5</code> despite using SHA-256?	Because <code>Type 4</code> used no salt and only a single iteration, while <code>Type 5</code> (MD5crypt) uses a salt and many iterations.	wifi
-T17tt00UU	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which Cisco password type is essentially plaintext with simple obfuscation?	<code>Type 7</code>	wifi
-U17uu11VV	Basic (type in the answer)	Ops::WiFi Gym::Chain 17: Cisco Passwords	Which <code>john</code> <code>--format</code> value should you use to crack Cisco <code>Type 5</code> (MD5crypt)?	<code>--format=md5crypt</code>	wifi
-V17vv22WW	Basic	Ops::WiFi Gym::Chain 17: Cisco Passwords	What is the recommended remediation if you find Cisco <code>Type 7</code> passwords in configs?	Immediately rotate those secrets and migrate to stronger types (e.g., <code>Type 8</code> or <code>Type 9</code>), and remove plaintext/obfuscated secrets from configs.	wifi
-```
