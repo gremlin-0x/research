@@ -1,4 +1,4 @@
-# Fragmentation Attack — Purpose & Quick Overview
+# Chain #20: Fragmentation Attack
 
 Short purpose: capture or generate enough PRGA (keystream) bytes from a WEP-protected AP using 802.11 fragmentation, so you can forge packets (most commonly an ARP request) and then replay them to rapidly produce IVs for offline WEP cracking.
 
