@@ -27,3 +27,4 @@ Practical Wi-Fi attack chains with step-by-step instructions and Anki flashcards
 - [Chain 22: Cafe Latte Attack](wifi_chain_22.md)
 - [Chain 23: Attacking WEP Access Points Without Clients](wifi_chain_23.md)
 - [Chain 24: Additional WEP Cracking](wifi_chain_24.md)
+- [Chain 25: WPA & WPA2](wifi_chain_25.md) 
