@@ -29,3 +29,4 @@ Practical Wi-Fi attack chains with step-by-step instructions and Anki flashcards
 - [Chain 24: Additional WEP Cracking](wifi_chain_24.md)
 - [Chain 25: WPA & WPA2](wifi_chain_25.md) 
 - [Chain 26: WPA-Enterprise](wifi_chain_26.md)
+- [Chain 27: EAP Downgrade Attack](wifi_chain_27.md)
