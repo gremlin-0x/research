@@ -30,3 +30,4 @@ Practical Wi-Fi attack chains with step-by-step instructions and Anki flashcards
 - [Chain 25: WPA & WPA2](wifi_chain_25.md) 
 - [Chain 26: WPA-Enterprise](wifi_chain_26.md)
 - [Chain 27: EAP Downgrade Attack](wifi_chain_27.md)
+- [Chain 28: Enterprise Evil-Twin Attack](wifi_chain_28.md)
