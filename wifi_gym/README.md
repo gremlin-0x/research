@@ -1,33 +1,9 @@
 # WiFi Gym
 
-Practical Wi-Fi attack chains with step-by-step instructions and Anki flashcards.
+Practical Wi-Fi cheatsheets with step-by-step instructions and Anki flashcards.
 
-## Chains
-- [Chain 1: Interface Setup & Configuration](wifi_chain_01.md)
-- [Chain 2: Switching Interface Modes](wifi_chain_02.md)
-- [Chain 3: Packet Capture & Analysis](wifi_chain_03.md)
-- [Chain 4: Generating Traffic & Deauthentication](wifi_chain_04.md)
-- [Chain 5: Decrypting Captures](wifi_chain_05.md)
-- [Chain 6: Cracking Keys](wifi_chain_06.md)
-- [Chain 7: Connecting to Wi-Fi Networks](wifi_chain_07.md)
-- [Chain 8: Finding Hidden SSIDs](wifi_chain_08.md)
-- [Chain 9: Bypassing MAC Filtering](wifi_chain_09.md)
-- [Chain 10: Traditional WPA/WPA2 Password Attack](wifi_chain_10.md)
-- [Chain 11: Advanced Password Cracking (Rules, Masks, Combinator & Hybrid)](wifi_chain_11.md)
-- [Chain 12: CPU vs GPU Cracking & Performance Tuning](wifi_chain_12.md)
-- [Chain 13: Default Credentials & Vendor-Based Cracking](wifi_chain_13.md)
-- [Chain 14: Generating Custom Wordlists](wifi_chain_14.md)
-- [Chain 15: Username Generation for WPA‑Enterprise](wifi_chain_15.md)
-- [Chain 16: Precomputation (Rainbow Table) Attack](wifi_chain_16.md)
-- [Chain 17: Cisco Password Cracking](wifi_chain_17.md)
-- [Chain 18: WEP & RC4](wifi_chain_18.md)
-- [Chain 19: ARP Request Replay Attack](wifi_chain_19.md) 
-- [Chain 20: Fragmentation Attack](wifi_chain_20.md) 
-- [Chain 21: Korek Chop Chop Attack](wifi_chain_21.md)
-- [Chain 22: Cafe Latte Attack](wifi_chain_22.md)
-- [Chain 23: Attacking WEP Access Points Without Clients](wifi_chain_23.md)
-- [Chain 24: Additional WEP Cracking](wifi_chain_24.md)
-- [Chain 25: WPA & WPA2](wifi_chain_25.md) 
-- [Chain 26: WPA-Enterprise](wifi_chain_26.md)
-- [Chain 27: EAP Downgrade Attack](wifi_chain_27.md)
-- [Chain 28: Enterprise Evil-Twin Attack](wifi_chain_28.md)
+## Table of Contents
+- [Wi-Fi Penetration Testing Basics](wifi_01.md)
+- [Wi-Fi Password Cracking Techniques](wifi_02.md)
+- [Wired Equivalent Privacy (WEP) Attacks](wifi_03.md)
+- [Attacking WPA/WPA2 Wi-Fi Networks](wifi_04.md)
