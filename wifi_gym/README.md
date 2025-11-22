@@ -7,3 +7,4 @@ Practical Wi-Fi cheatsheets with step-by-step instructions and Anki flashcards.
 - [Wi-Fi Password Cracking Techniques](wifi_02.md)
 - [Wired Equivalent Privacy (WEP) Attacks](wifi_03.md)
 - [Attacking WPA/WPA2 Wi-Fi Networks](wifi_04.md)
+- [Attacking Wi-Fi Protected Setup (WPS)](wifi_05.md)
