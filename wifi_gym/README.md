@@ -11,3 +11,4 @@ Practical Wi-Fi cheatsheets with step-by-step instructions and Anki flashcards.
 - [Wi-Fi Evil Twin Attacks](wifi_06.md)
 - [Attacking WPA3 Wi-Fi Networks](wifi_07.md)
 - [Bypassing Wi-Fi Captive Portals](wifi_08.md)
+- [Wi-Fi Penetration Testing Tools and Techniques](wifi_09.md)

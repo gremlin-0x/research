@@ -807,7 +807,6 @@ curl -H "X-Original-URL: /server-status" http://captive.htb.local/server-status
 **Breakdown:**
 
 - Spoofs origin so backend treats request as coming from localhost.
-    
 
 ---
 
